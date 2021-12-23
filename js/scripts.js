@@ -184,23 +184,23 @@ $(document).ready(function() {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "Boda de Carmen y Rubén",
 
             // Event start date
-            start: new Date('Nov 27, 2017 10:00'),
+            start: new Date('Jun 25, 2022'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('Jun 26, 2022'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'Hotel Palacio de Caranceja, Cantabria',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "No podemos esperar a verte en nuestro gran día. Para cualquier consulta o problema, comuníquese con nosotros. Carmen +34659267629 o Rubén +34610899482 "
         }
     });
 
@@ -212,7 +212,7 @@ $(document).ready(function() {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Un segundo..</strong> Estamos guardando los datos.'));
 
         if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40' &&
             MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {

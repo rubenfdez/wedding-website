@@ -1,4 +1,5 @@
-;(function(exports) {
+;
+(function(exports) {
     var MS_IN_MINUTES = 60 * 1000;
 
     var formatTime = function(date) {
@@ -32,7 +33,7 @@
 
         yahoo: function(event) {
             var eventDuration = event.end ?
-                ((event.end.getTime() - event.start.getTime())/ MS_IN_MINUTES) :
+                ((event.end.getTime() - event.start.getTime()) / MS_IN_MINUTES) :
                 event.duration;
 
             // Yahoo dates are crazy, we need to convert the duration from minutes to hh:mm
@@ -79,7 +80,8 @@
                     'DESCRIPTION:' + (event.description || ''),
                     'LOCATION:' + (event.address || ''),
                     'END:VEVENT',
-                    'END:VCALENDAR'].join('\n'));
+                    'END:VCALENDAR'
+                ].join('\n'));
 
             return '<a class="' + eClass + '" target="_blank" href="' +
                 href + '">' + calendarName + ' Calendar</a>';
@@ -129,7 +131,7 @@
         var result = document.createElement('div');
 
         result.innerHTML = '<label id="add-to-calendar-label" for="checkbox-for-' +
-            calendarId + '" class="btn btn-fill btn-small"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Add to Calendar</label>';
+            calendarId + '" class="btn btn-fill btn-small"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Añadir al calendario</label>';
         result.innerHTML += '<input name="add-to-calendar-checkbox" class="add-to-calendar-checkbox" id="checkbox-for-' + calendarId + '" type="checkbox">';
 
         Object.keys(calendars).forEach(function(services) {
